@@ -1,0 +1,68 @@
+<head>
+    <script language="javascript" src="scientificCalc.js"></script>
+    <link href="scientificCalc.css" rel="stylesheet">
+    </link>
+</head>
+<form name="sci-calc">
+    <div class="center">
+        <table class="calculator" cellspacing="0" cellpadding="1">
+            <tr>
+                <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="opTop" name="opTop" value="C" onclick="this.form.display.value=  0 ">
+                </td>
+                <td><input type="button" class="opTop" name="opTop" value="<<" onclick="onErase()">
+                </td>
+                <td><input type="button" class="opTop" name="opTop" value="=" onclick="if(checkNum(this.form.display.value)) { operations('compute') }"></td>
+                <td><input type="button" class="opOpps" name="opOpps" value="&#960;" onclick="addtoDisplay('3.14159265359')"></td>
+                <td><input type="button" class="opMath" name="opMath" value="%" onclick=" percent(this.form.display)">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" class="opNum" name="opNum" value="7" onclick="addtoDisplay( '7')">
+                </td>
+                <td><input type="button" class="opNum" name="opNum" value="8" onclick="addtoDisplay( '8')">
+                </td>
+                <td><input type="button" class="opNum" name="opNum" value="9" onclick="addtoDisplay( '9')">
+                </td>
+                <td><input type="button" class="opOpps" name="opOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) {operations('exp') }"></td>
+                <td><input type="button" class="opMath" name="opMath" value="/" onclick="addtoDisplay( '/')">
+                </td>
+                <tr>
+                    <td><input type="button" class="opNum" name="opNum" value="4" onclick="addtoDisplay( '4')">
+                    </td>
+                    <td><input type="button" class="opNum" name="opNum" value="5" onclick="addtoDisplay('5')">
+                    </td>
+                    <td><input type="button" class="opNum" name="opNum" value="6" onclick="addtoDisplay('6')">
+                    </td>
+                    <td><input type="button" class="opOpps" name="opOpps" value="ln" onclick="if(checkNum(this.form.display.value)) {operations('ln') }"></td>
+                    <td><input type="button" class="opMath" name="opMath" value="*" onclick="addtoDisplay('*')">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="opNum" name="opNum" value="1" onclick="addtoDisplay('1')">
+                    </td>
+                    <td><input type="button" class="opNum" name="opNum" value="2" onclick="addtoDisplay('2')">
+                    </td>
+                    <td><input type="button" class="opNum" name="opNum" value="3" onclick="addtoDisplay('3')">
+                    </td>
+                    <td><input type="button" class="opOpps" name="opOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) {operations('sqrt') }"></td>
+                    <td><input type="button" class="opMath" name="opMath" value="-" onclick="addtoDisplay( '-')">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="opMath" name="opMath" value="&#177" onclick="changeSign(this.form.display)"></td>
+                    <td><input type="button" class="opNum" name="opNum" value="0" onclick="addtoDisplay( '0')">
+                    </td>
+                    <td><input type="button" class="opMath" name="opMath" value="&#46;" onclick="addtoDisplay( '&#46;')"></td>
+                    <td><input type="button" class="opOpps" name="opOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) {operations('square') }"></td>
+                    <td><input type="button" class="opMath" name="opMath" value="+" onclick="addtoDisplay( '+')">
+                    </td>
+                </tr>
+                </tabel>
+    </div>
+</form>
+</body>
+
+</html>
