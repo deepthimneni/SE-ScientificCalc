@@ -60,6 +60,11 @@
                     <td><input type="button" class="opMath" name="opMath" value="+" onclick="addtoDisplay( '+')">
                     </td>
                 </tr>
+                <tr>
+                    <td><input type="button" class="opOpps" name="opOpps" value="sin" onclick="if(checkNum(this.form.display.value)) {operations('sine') }"></td>
+                    <td><input type="button" class="opOpps" name="opOpps" value="cos" onclick="if(checkNum(this.form.display.value)) {operations('cosine') }"></td>
+                    <td><input type="button" class="opOpps" name="opOpps" value="tan" onclick="if(checkNum(this.form.display.value)) {operations('tangent') }"></td>
+                </tr>
                 </tabel>
     </div>
 </form>

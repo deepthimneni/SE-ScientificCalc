@@ -10,6 +10,15 @@ function operations(operation) {
         case "exp":
             formInput.value = Math.exp(formInput.value);
             break;
+        case "sine":
+            formInput.value = Math.sin(formInput.value);
+            break;
+        case "cosine":
+            formInput.value = Math.cos(formInput.value);
+            break;
+        case "tangent":
+            formInput.value = Math.tan(formInput.value);
+            break;
         case "compute":
             formInput.value = showResult(formInput.value)
             break;
